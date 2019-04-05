@@ -1,7 +1,7 @@
 {
 
 "manifest_version": 2,
-"name": "Basic Recording",
+"name": "REMO TESTING",
 "version": "1.0",
 "content_scripts": [
   {
@@ -13,13 +13,15 @@
 
     "js": ["content.js"]
 
+
   }
 
 
 ],
 
 "background": {
-  "scripts": ["background.js"]
+
+  "page": "main/pages/background.html"
 },
 
 "browser_action": {
