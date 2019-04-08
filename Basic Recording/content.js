@@ -8,19 +8,20 @@ port.onMessage.addListener(function(msg) {
 
 
 
-//This keepsvar inputs, index;
+
+
 var instructions = [];
 var instructionsObject = {};
 
+
+
+//This listens for input forms
 inputs = document.getElementsByTagName('input');
 
 for (index = 0; index < inputs.length; ++index) {
     inputs[index].onblur = function () {
         port.postMessage({metadata: "inputId: "+this.id});
-        //instructionsObject.put("instructions", instructions);
-        // console.log("Type into the search bar where it reads" + "' "+this.placeholder+"' ");
-        // console.log("The user typed in: " + this.value);
-        // console.log("The input type was: " + this.type);
+
 
     };
 }

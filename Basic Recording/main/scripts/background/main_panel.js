@@ -1,10 +1,13 @@
 
 
-
+//this retrieves the TextArea element
 let box = document.getElementById('box');
 
 
 
+
+//This connects with the port from that is initiated in the content.js file
+//If the start button has been pressed, then it will record the data from the port.
 chrome.runtime.onConnect.addListener(function(port) {
     console.assert(port.name == "Exchange");
     port.onMessage.addListener(function(msg) {
@@ -20,12 +23,15 @@ chrome.runtime.onConnect.addListener(function(port) {
 });
 
 
-let toggleButton = document.getElementById('toggle');
 
+//This is the start/stop button and the record state is initially off or on stop.
+let toggleButton = document.getElementById('toggle');
 var recordState = false;
 
 
 
+
+//This function changes the label of the toggle button and the record state.
 toggleButton.onclick = function () {
 
 
@@ -38,11 +44,11 @@ toggleButton.onclick = function () {
 };
 
 
+//This is the clear button from the DOM
 let clearButton = document.getElementById('clear');
 
 
-
-
+//The clear button simply clears the data in the text area.
 clearButton.onclick = function () {
 
 
@@ -51,11 +57,10 @@ clearButton.onclick = function () {
 };
 
 
-// Save stuff
-
-
-
+// Save button
 var saveButton = document.getElementById('save');
+
+
 saveButton.onclick = function () {
 
 
@@ -68,6 +73,7 @@ function destroyClickedElement(event) {
     document.body.removeChild(event.target);
 }
 
+//This saves the text area data into a text file
 function saveTextAsFile() {
     var textToWrite = document.getElementById('box').innerText;
     var textFileAsBlob = new Blob([ textToWrite ], { type: 'text/plain' });
