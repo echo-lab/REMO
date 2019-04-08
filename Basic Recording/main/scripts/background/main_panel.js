@@ -1,18 +1,18 @@
 
 
 
-var box = document.getElementById('box');
+let box = document.getElementById('box');
 
-// box.innerText = "Hello World";
 
-console.log("test_background");
 
 chrome.runtime.onConnect.addListener(function(port) {
     console.assert(port.name == "Exchange");
     port.onMessage.addListener(function(msg) {
 
-
-        box.innerText += " " + msg.metadata + "\\\n";
+        if(recordState)
+        {
+            box.innerText += " " + msg.metadata + "\\\n";
+        }
 
 
 
@@ -20,26 +20,40 @@ chrome.runtime.onConnect.addListener(function(port) {
 });
 
 
-// var startButton = document.getElementById('start');
-//
-// var recordState = false;
-//
-//
-//
-// startButton.onclick = function () {
-//
-//
-//     recordState = !recordState;
-//     console.log(recordState);
-//
-// };
+let toggleButton = document.getElementById('toggle');
 
-//
-// chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//     chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-//         console.log(response.farewell);
-//     });
-// });
+var recordState = false;
+
+
+
+toggleButton.onclick = function () {
+
+
+    recordState = !recordState;
+    toggleButton.value = recordState == true ? "Stop" : "Start";
+    toggleButton.style.backgroundColor = recordState == true ? "red" : "green";
+
+
+
+};
+
+
+let clearButton = document.getElementById('clear');
+
+
+
+
+clearButton.onclick = function () {
+
+
+    box.innerText = "";
+
+};
+
+
+
+
+
 
 
 
