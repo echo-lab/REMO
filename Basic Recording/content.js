@@ -41,3 +41,28 @@ for (var i = 0; i < buttons.length; i++) {
     };
 
 }
+
+
+
+
+
+
+
+
+//This keeps track of URL changing
+var oldURL = "";
+var currentURL = window.location.href;
+function checkURLchange(currentURL){
+    if(currentURL != oldURL){
+
+        oldURL = currentURL;
+        port.postMessage({metadata: "currentURL: "+ window.location.href});
+    }
+
+    oldURL = window.location.href;
+    setInterval(function() {
+        checkURLchange(window.location.href);
+    }, 1000);
+}
+
+checkURLchange();

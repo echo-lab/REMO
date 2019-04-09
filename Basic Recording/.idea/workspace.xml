@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="36020f91-a5e7-4038-b350-69d4d6bf0ddb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/scripts/background/main_panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/scripts/background/main_panel.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="356">
+              <caret line="58" column="72" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -118,16 +117,18 @@
       <workItem from="1553796552867" duration="58000" />
       <workItem from="1554642207032" duration="2035000" />
       <workItem from="1554691409872" duration="1850000" />
+      <workItem from="1554817333498" duration="768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3943000" />
+    <option name="totallyTimeSpent" value="4711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1200" height="705" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27547497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27979276" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -216,8 +217,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="356">
+          <caret line="58" column="72" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
         </state>
       </provider>
     </entry>
